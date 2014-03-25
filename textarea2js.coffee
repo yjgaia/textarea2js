@@ -2,6 +2,8 @@ require('./UPPERCASE_ONE/BOOT.js')
 
 BOOT
 	CONFIG :
+		defaultTitle : 'textarea2js'
+		port : 8326
 		isDevMode : true
 		
 	SERVER_CONFIG :
@@ -26,6 +28,8 @@ BOOT
 							children : [
 								
 								H1
+									style :
+										marginBottom : 10
 									children : ['<- textarea2js ->']
 								
 								textarea = TEXTAREA
@@ -54,7 +58,3 @@ BOOT
 						FIRE_ALL
 							node : textarea
 							name : 'keydown'
-
-						#OVERRIDE: self.close
-						self.close = close = (params) ->
-							wrapper.remove()
