@@ -1,0 +1,1 @@
+OVERRIDE(EVENT_LOW,function(n){"use strict";global.EVENT_LOW=EVENT_LOW=CLASS({preset:function(){return n},init:function(n,o,a,t,e){var i,c,h,l=t.node,r=t.name;"hashchange"===r&&void 0===global.onhashchange&&(i=location.hash,c=setInterval(function(){location.hash!==i&&(i=location.hash,e(void 0,l))},100),OVERRIDE(a.remove,function(){a.remove=h=function(){clearInterval(c)}}))}})});
