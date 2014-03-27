@@ -25,6 +25,7 @@ BOOT
 								marginTop : 50
 								fontSize : 20
 								textAlign : 'center'
+								paddingBottom : 50
 							children : [
 								
 								H1
@@ -36,14 +37,14 @@ BOOT
 									style :
 										height : 200
 									value : 'this\nis\nexample.'
-									onKeydown : ->
+									onKeyup : ->
 										DELAY ->
 											js.setValue '\'' + (textarea.getValue().replace(/\n/g, '\\n').replace(/'/g, '\\\'')) + '\''
 								
 								js = TEXTAREA
 									style :
 										height : 200
-									onKeydown : ->
+									onKeyup : ->
 										DELAY ->
 											textarea.setValue eval(js.getValue())
 								
@@ -51,10 +52,26 @@ BOOT
 									style :
 										marginTop : 10
 										fontSize : 12
-									children : [LINK('https://github.com/Hanul/textarea2js'), BR(), 'This project build with UPPERCASE(', LINK('http://UPPERCASE.IO') , ').', BR(), 'by Hanul.']
+									children : [
+										
+										A
+											href : 'https://github.com/Hanul/textarea2js'
+											target : '_blank'
+											children : ['https://github.com/Hanul/textarea2js']
+											
+										BR()
+										
+										'This project build with UPPERCASE('
+										
+										A
+											href : 'http://UPPERCASE.IO'
+											target : '_blank'
+											children : ['http://UPPERCASE.IO']
+											
+										').', BR(), 'by Hanul.']
 							]
 						).appendTo BODY
 						
 						FIRE_ALL
 							node : textarea
-							name : 'keydown'
+							name : 'keyup'
