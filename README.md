@@ -6,3 +6,6 @@ textarea 내용을 JavaScript 형식으로, 또 반대로 변환해주는 COFFEE
 
 This project build with UPPERCASE(http://UPPERCASE.IO).<br>
 by Hanul.
+
+## License
+[The MIT License](http://opensource.org/licenses/MIT)
